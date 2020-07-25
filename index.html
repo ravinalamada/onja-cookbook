@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Onja cookbook</title>
+</head>
+
+<body>
+  <header>
+    <h1>Onja cookbook</h1>
+  </header>
+  <main>
+    <form>
+      <div class="recipe-name">
+        <p>What's the recipe name?</p>
+        <label for="name">
+          <input type="text" id="name" class="name" required>
+        </label>
+      </div>
+      <div class="cook-name">
+        <p>What's the recipe name?</p>
+        <label for="name">
+          <input type="text" id="name">
+        </label>
+      </div>
+      <div class="dish-img">
+        <p>Picture of the result(url)</p>
+        <label for="image">
+          <input type="url" id="image" class="image" required>
+        </label>
+      </div>
+      <div class="cook">
+        <p>Who is the cook?</p>
+        <label for="cook-name">
+          <input type="text" id="cook-name" class="cook-name" required>
+        </label>
+      </div>
+      <div class="cooking-level">
+        <p>What's the difficulty?</p>
+        <select name="level" id="level" class="level">
+          <option value="easy">easy</option>
+          <option value="hard">hard</option>
+          <option value="difficult">difficult</option>
+        </select>
+      </div>
+      <div class="timing">
+        <p>How much time does it take?</p>
+        <select name="duration" id="duration" class="duration" required>
+          <option value="15mn">15mn</option>
+          <option value="30mn">30mn</option>
+          <option value="45mn">45mn</option>
+          <option value="50mn">50mn</option>
+          <option value="60mn">60</option>
+        </select>
+      </div>
+      <div class="ingredients">
+        <p>Ingredients</p>
+        <input type="text" class="ingredient" required>
+        <button class="add-ingredient">Add new ingredients to th list</button>
+      </div>
+      <div class="step">
+        <p>Steps</p>
+        <input type="text" class="cooking-step" required>
+        <button class="add-step">Add a new step to the list</button>
+      </div>
+      <button class="submit-button">Submit</button>
+  </main>
+  </form>
+</body>
+
+</html>
