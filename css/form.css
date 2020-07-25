@@ -14,7 +14,7 @@ form {
   flex-direction: column;
   margin-inline-start: auto;
   margin-inline-end: auto;
-  color: aliceblue;
+  color: aquamarine;
 }
 
 .cooking-step,
@@ -23,6 +23,15 @@ form {
   margin-block-end: 1rem;
 }
 
+.cook-book-input {
+  padding: 1rem;
+}
+
+.level,
+.duration {
+  width: 191px;
+  padding: 1rem;
+}
 .new-igredient-container,
 .new-step-container {
   margin-block-start: 1rem;
