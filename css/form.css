@@ -1,0 +1,28 @@
+form {
+  max-width: 500px;
+  margin-inline-start: auto;
+  margin-inline-end: auto;
+  display: flex;
+  flex-direction: column;
+  background-color: #333333;
+  border-radius: 2rem;
+  border: 0.3rem yellow solid;
+}
+
+.cook-book {
+  display: flex;
+  flex-direction: column;
+  margin-inline-start: auto;
+  margin-inline-end: auto;
+  color: aliceblue;
+}
+
+.cooking-step,
+.ingredient {
+  margin-block-start: 1rem;
+  margin-block-end: 1rem;
+}
+
+
+
+
