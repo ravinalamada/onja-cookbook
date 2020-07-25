@@ -1,6 +1,5 @@
 // References
 console.log('works');
-const formElement = document.querySelector('form');
 const ingredientsCont = document.querySelector('.ingredients-container');
 const addIngredientBtn = document.querySelector('.add-ingredient');
 const ingredientContent = document.querySelector('.ingredient');
@@ -14,7 +13,7 @@ const cookName = document.querySelector('#cook-name');
 const level = document.querySelector('#level');
 const duration = document.querySelector('#duration')
 
-// This function will creat Html in order to new add ingredients and append it into the DOM
+// This function will creat Html in order to enable a user add new ingredients and append it into the DOM
 const handleNewIng = () => {
   myHtml = `
   <div class="new-igredient-container">
@@ -26,6 +25,7 @@ const handleNewIng = () => {
   ingredientsCont.insertAdjacentHTML('beforeend', myHtml);
 }
 
+// This function will creat Html in order to new add step and append it into the DOM
 const handleSteps = () => {
   myHtml = `
   <div class="new-step-container">
@@ -35,13 +35,16 @@ const handleSteps = () => {
   stepCont.insertAdjacentHTML('beforeend', myHtml);
 };
 
-const cookObject = () => {
+// Covert form into object
+
+const handleNewObj = (event) => {
+  event.preventDefault();
   return recipes = `[
     {
       title: '${recipeName.value}',
       picture: '${image.value}',
       author: '${cookName.value}',
-      difficulty: '${level.value}',
+      difficulty: 'easy',
       timing: '${duration.value}',
       ingredients: ['eggs', 'salt', 'water'],
       steps: [
@@ -54,14 +57,16 @@ const cookObject = () => {
   ]`;
 };
 
-
-const submitObj = () => {
-  const newObj = cookObject();
+// Assign the function above
+const handleSubmit = (e) => {
+  e.preventDefault();
+  const newObj = handleSubmit;
   console.log(newObj);
-};
+}
+
 
 // Listen to the all events
 
 addIngredientBtn.addEventListener('click', handleNewIng);
 addStepBtn.addEventListener('click', handleSteps);
-submitButton.addEventListener('submit', submitObj);
+submitButton.addEventListener('submit', handleSubmit);

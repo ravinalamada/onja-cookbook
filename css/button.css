@@ -5,7 +5,7 @@
   margin-block-start: 1rem;
   margin-block-end: 1rem;
   text-transform: uppercase;
-  cursor: pointer;
+  /* cursor: pointer; */
 }
 
 .add-ingredient,

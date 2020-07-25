@@ -17,24 +17,24 @@
       <div class="cook-book">
         <p class="description">What's the recipe name?</p>
         <label for="name">
-          <input type="text" id="name" class="cook-book-input name" required>
+          <input type="text" id="name" class="cook-book-input name" name="name" required>
         </label>
       </div>
       <div class="cook-book dish-img">
         <p class="description">Picture of the result(url)</p>
         <label for="image">
-          <input type="url" id="image" class="cook-book-input image">
+          <input type="url" id="image" class="cook-book-input image" name="name" required>
         </label>
       </div>
       <div class="cook-book cook">
         <p class="description">Who is the cook?</p>
         <label for="cook-name">
-          <input type="text" id="cook-name" clcook-book-input class="cook-book-input cook-name">
+          <input type="text" id="cook-name" class="cook-book-input cook-name" name="name" required>
         </label>
       </div>
       <div class="cook-book cooking-level">
         <p class="description">What's the difficulty?</p>
-        <select name="level" id="level" class="level">
+        <select name="name" id="level" class="level">
           <option value="easy">easy</option>
           <option value="hard">hard</option>
           <option value="difficult">difficult</option>
@@ -42,7 +42,7 @@
       </div>
       <div class="cook-book timing">
         <p class="description">How much time does it take?</p>
-        <select name="duration" id="duration" class="duration">
+        <select name="name" id="duration" class="duration">
           <option value="15mn">15mn</option>
           <option value="30mn">30mn</option>
           <option value="45mn">45mn</option>
@@ -53,16 +53,16 @@
       <div class="cook-book ingredients-container">
         <div class="ingredients">
           <p class="description">Ingredients</p>
-          <input type="text" class="cook-book-input ingredient" required>
+          <input type="text" class="cook-book-input ingredient" name="name" required>
         </div>
         <button class="add-ingredient">Add ingredients</button>
       </div>
       <div class="cook-book step-container">
         <div class="step">
           <p class="description">Steps</p>
-          <input type="text" class="cook-book-input cooking-step" required>
+          <input type="text" class="cook-book-input cooking-step" name="name" required>
         </div>
-        <button class="add-step">Add steps</button>
+        <button class="add-step">Add steps </button>
       </div>
       <button class="submit-button">Submit</button>
   </main>
