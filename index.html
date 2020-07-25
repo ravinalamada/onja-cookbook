@@ -29,13 +29,13 @@
       <div class="cook-book dish-img">
         <p class="description">Picture of the result(url)</p>
         <label for="image">
-          <input type="url" id="image" class="image" required>
+          <input type="url" id="image" class="image">
         </label>
       </div>
       <div class="cook-book cook">
         <p class="description">Who is the cook?</p>
         <label for="cook-name">
-          <input type="text" id="cook-name" class="cook-name" required>
+          <input type="text" id="cook-name" class="cook-name">
         </label>
       </div>
       <div class="cook-book cooking-level">
@@ -48,7 +48,7 @@
       </div>
       <div class="cook-book timing">
         <p class="description">How much time does it take?</p>
-        <select name="duration" id="duration" class="duration" required>
+        <select name="duration" id="duration" class="duration">
           <option value="15mn">15mn</option>
           <option value="30mn">30mn</option>
           <option value="45mn">45mn</option>
@@ -56,19 +56,24 @@
           <option value="60mn">60</option>
         </select>
       </div>
-      <div class="cook-book ingredients">
-        <p class="description">Ingredients</p>
-        <input type="text" class="ingredient" required>
+      <div class="cook-book ingredients-container">
+        <div class="ingredients">
+          <p class="description">Ingredients</p>
+          <input type="text" class="ingredient" required>
+        </div>
         <button class="add-ingredient">Add new ingredients to th list</button>
       </div>
-      <div class="cook-book step">
-        <p class="description">Steps</p>
-        <input type="text" class="cooking-step" required>
+      <div class="cook-book step-container">
+        <div class="step">
+          <p class="description">Steps</p>
+          <input type="text" class="cooking-step" required>
+        </div>
         <button class="add-step">Add a new step to the list</button>
       </div>
       <button class="submit-button">Submit</button>
   </main>
   </form>
+  <script src="./css/index.js"></script>
 </body>
 
 </html>
