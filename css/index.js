@@ -1,5 +1,6 @@
 // References
 console.log('works');
+const formEl = document.querySelector('form')
 const ingredientsCont = document.querySelector('.ingredients-container');
 const addIngredientBtn = document.querySelector('.add-ingredient');
 const ingredientContent = document.querySelector('.ingredient');
@@ -60,13 +61,11 @@ const handleNewObj = (event) => {
 // Assign the converted function above
 const handleSubmit = (e) => {
   e.preventDefault();
-  const newObj = handleSubmit;
+  const newObj = handleNewObj;
   console.log(newObj);
-}
-
+};
 
 // Listen to the all events
-
 addIngredientBtn.addEventListener('click', handleNewIng);
 addStepBtn.addEventListener('click', handleSteps);
-submitButton.addEventListener('submit', handleSubmit);
+formEl.addEventListener('submit', handleSubmit);
