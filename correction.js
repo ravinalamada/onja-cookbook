@@ -35,10 +35,11 @@ const handleSubmit = event => {
     ingredients.push(ingredientsList.children[i].children[0].value);
   };
   console.log(ingredients);
-  const step = [];
+  const steps = [];
   for (stepChildren of stepList.children) {
-    stepList.push(stepChildren.children[0].value);
+    steps.push(stepChildren.children[0].value);
   }
+
 };
 
 addIngredientBtn.addEventListener('click', addIngredientInput);
