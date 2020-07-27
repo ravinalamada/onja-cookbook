@@ -29,7 +29,7 @@ const handleNewIng = () => {
 const handleSteps = () => {
   myHtml = `
   <div class="new-step-container">
-    <input type="text" class="new-step" value = "${stepContent.value}" required>
+    <input type="text" class="new-step" required>
   </div>
   `;
   stepCont.insertAdjacentHTML('beforeend', myHtml);
@@ -44,7 +44,7 @@ const handleNewObj = (event) => {
       title: '${recipeName.value}',
       picture: '${image.value}',
       author: '${cookName.value}',
-      difficulty: 'easy',
+      difficulty: '${level.value}',
       timing: '${duration.value}',
       ingredients: ['eggs', 'salt', 'water'],
       steps: [
@@ -57,7 +57,7 @@ const handleNewObj = (event) => {
   ]`;
 };
 
-// Assign the function above
+// Assign the converted function above
 const handleSubmit = (e) => {
   e.preventDefault();
   const newObj = handleSubmit;
