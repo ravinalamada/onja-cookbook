@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>onj cookbook</title>
+  <link rel="stylesheet" href="./correction.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Onja cookbook</h1>
+    <form id="form">
+      <label for="title">What's the recipe name?</label>
+      <input
+        type="tel"
+        name="title"
+        id="title"
+        >
+      <label for="picture">Picture of the result(url)</label>
+      <input
+        type="url"
+        name="picture"
+        id="picture"
+      >
+      <label for="">Who is the cook?</label>
+      <input
+        type="text"
+        name="author"
+        id="author"
+        placeholder="The name of the chef"
+      >
+      <label for="difficult">What's the difficulty?</label>
+      <select name="difficulty" id="difficult">
+        <option value="easy">easy</option>
+        <option value="hard">hard</option>
+        <option value="difficult">difficult</option>
+      </select>
+      <label for="timing">How much time does it take?</label>
+      <select name="timing" id="timing">
+        <option value="15mn">15mn</option>
+        <option value="30mn">30mn</option>
+        <option value="45mn">45mn</option>
+        <option value="50mn">50mn</option>
+        <option value="60mn">60</option>
+      </select>
+      <label for="ingredients">Ingredients</label>
+        <ul id="ingredient-list">
+          <li>
+            <input type="text" id="ingredient1" name="ingredient1" value="Ingredients 1">
+          </li>
+        </ul>
+      <button type="button" class="add-ingredient">Add ingredients</button>
+      <label for="step1">Step</label>
+        <ul id="step-list">
+          <li>step1
+            <input type="text" id="step1" name="step1" value="step 1">
+          </li>
+        </ul>
+      <button type="button" class="add-step">Add steps</button>
+    <button type="submit" class="add-form">submit</button>
+    </form>
+  </div>
+  <script src="./correction.js"></script>
+</body>
+</html>

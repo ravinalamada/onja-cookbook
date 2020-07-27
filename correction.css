@@ -1,0 +1,24 @@
+form {
+  max-width: 500px;
+  margin-inline-start: auto;
+  margin-inline-end: auto;
+  display: flex;
+  flex-direction: column;
+  background-color: #333333;
+  border-radius: 2rem;
+  border: 0.3rem yellow solid;
+  padding: 2rem;
+}
+h1 {
+  font-style: italic;
+  color: red;
+  text-align: center;
+}
+
+label {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  color: aqua;
+}
+
+
