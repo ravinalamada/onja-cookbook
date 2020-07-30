@@ -1,48 +1,55 @@
-// Generate add ingredient input
-const formEl = document.querySelector('#fom')
-const addIngredientBtn = document.querySelector('button.add-ingredient');
-const ingredientsList = document.querySelector('#ingredient-list');
-const stepList = document.querySelector('#step-list');
+const addIngredientBtn = document.querySelector('button.addIngredient');
+const ingredientListElement = document.querySelector('#ingredientList');
+const addStepBtn = document.querySelector('button.addStep');
+const stepListElement = document.querySelector('#stepList');
+const formElement = document.querySelector('#addRecipeForm');
+const recipes = [];
 
-
-const addIngredientInput = event => {
-  const number = ingredientsList.children.length + 1;
-  const html = `
-    <li>
-      <input type="text" id="ingredient${number}" name="ingredient${number}" value="step 1">
-    </li>
-  `
-  ingredientsList.insertAdjacentHTML('beforeend', html);
+// 1) Generate add ingredient input
+const addIngredientInput = e => {
+	const number = ingredientListElement.children.length + 1;
+	const liHTML = `<li><input id="ingredient${number}" type="text" name="ingredient${number}" value="Ingredient ${number}"/></li>`;
+	ingredientListElement.insertAdjacentHTML('beforeend', liHTML);
 };
 
-const addStepInput = event => {
-  const number = stepList.children.length + 1;
-  const html = `
-    <li>
-      <input type="text" id="step${number}" name="step${number}" value="step 1">
-    </li>
-  `
-  stepList.insertAdjacentHTML('beforeend', html);
+// 2) Generate add steps input
+const addStepInput = e => {
+	const number = stepListElement.children.length + 1;
+	const liHTML = `<li><input id="step${number}" type="text" name="step${number}" value="Step ${number}"/></li>`;
+	stepListElement.insertAdjacentHTML('beforeend', liHTML);
 };
 
-const handleSubmit = event => {
-  event.preventDefault();
-  const form = event.currentTarget;
-  const { title, picture, author, difficulty, timing} = form;
-  // How can I grab back the ingredients and the input?
-  const ingredients = [];
-  for (let i = 0; i < ingredientsList.children.length; i++) {
-    ingredients.push(ingredientsList.children[i].children[0].value);
-  };
-  console.log(ingredients);
-  const steps = [];
-  for (stepChildren of stepList.children) {
-    steps.push(stepChildren.children[0].value);
-  }
+const handleSubmit = e => {
+	e.preventDefault();
+	console.log('submit', e);
+	const form = e.currentTarget;
+	const { title, picture, author, difficulty, timing } = form;
+	// how can I grab back the ingredients and the input?
+	const ingredients = [];
+	for (let i = 0; i < ingredientListElement.children.length; i++) {
+		ingredients.push(ingredientListElement.children[i].children[0].value);
+	}
+	console.log(ingredients);
+	const steps = [];
+	for (stepChildren of stepListElement.children) {
+		steps.push(stepChildren.children[0].value);
+	}
+	console.log(steps);
 
+	// create the object
+	const recipe = {
+		title: title.value,
+		picture: picture.value,
+		author: author.value,
+		difficulty: difficulty.value,
+		timing: timing.value,
+		ingredients: ingredients,
+		steps: steps,
+	};
+	console.log(recipe);
+	recipes.push(recipe);
 };
 
+addStepBtn.addEventListener('click', addStepInput);
 addIngredientBtn.addEventListener('click', addIngredientInput);
-addIngredientBtn.addEventListener('click', addStepInput);
-formEl.addEventListener('submit', handleSubmit);
-
+formElement.addEventListener('submit', handleSubmit);
